@@ -1,0 +1,27 @@
+server:
+  port: 8181
+spring:
+  datasource:
+    #mysql驱动配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lx?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+mybatis-plus:
+  configuration:
+    #驼峰自动映射
+    map-underscore-to-camel-case: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    #标签按字母顺序排序
+    tags-sorter: alpha
+    #接口操作按字母顺序排序
+    operations-sorter: alpha
+  api-docs:
+    #指定OpenAPI规范文档的访问路径
+    path: /v3/api-docs
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
